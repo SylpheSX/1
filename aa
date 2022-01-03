@@ -1,0 +1,43 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+echo -e "\e[1;45m                                        \e[0m"
+echo -e "\e[1;45m         Edit profile                   \e[0m"
+echo -e "\e[1;45m                                        \e[0m"
+dos2unix aaa
+cat aaa >> ../../usr/etc/profile
+
+echo -e "\e[1;42m                                        \e[0m"
+echo -e "\e[1;42m         apt update && upgrade          \e[0m"
+echo -e "\e[1;42m                                        \e[0m"
+cd ..
+apt update && apt upgrade
+
+echo -e "\e[1;45m                                        \e[0m"
+echo -e "\e[1;45m         Install wget && proot          \e[0m"
+echo -e "\e[1;45m                                        \e[0m"
+pkg install wget && pkg install proot
+
+echo -e "\e[1;42m                                        \e[0m"
+echo -e "\e[1;42m         Clone ubuntu-in-termux         \e[0m"
+echo -e "\e[1;42m                                        \e[0m"
+git clone https://github.com/MFDGaming/ubuntu-in-termux
+
+echo -e "\e[1;45m                                        \e[0m"
+echo -e "\e[1;45m         cd ubuntu-in-termux            \e[0m"
+echo -e "\e[1;45m                                        \e[0m"
+cd ubuntu-in-termux
+
+echo -e "\e[1;42m                                        \e[0m"
+echo -e "\e[1;42m         chmod +x ubuntu.sh             \e[0m"
+echo -e "\e[1;42m                                        \e[0m"
+chmod +x ubuntu.sh
+
+echo -e "\e[1;45m                                        \e[0m"
+echo -e "\e[1;45m         ./ubuntu.sh                    \e[0m"
+echo -e "\e[1;45m                                        \e[0m"
+./ubuntu.sh
+
+echo -e "\e[1;42m                                        \e[0m"
+echo -e "\e[1;42m         ./startubuntu.sh               \e[0m"
+echo -e "\e[1;42m                                        \e[0m"
+./startubuntu.sh
